@@ -1,4 +1,4 @@
-# Async_FIFO
+# Asynchronous_FIFO
 
 Verilog implementation of an **Asynchronous FIFO** using Gray coding and two-flop synchronizers.
 
