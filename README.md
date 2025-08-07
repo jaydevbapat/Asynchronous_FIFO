@@ -16,14 +16,10 @@ This project implements an **Asynchronous FIFO** with the following specificatio
 - **Addressing:** Binary-coded pointer for memory access
 
 The design is inspired by and follows guidelines from:  
-*"Simulation and Synthesis Techniques for Asynchronous FIFO Design"*  
-by **Clifford E. Cummings**, Sunburst Design, Inc.  
+*"Simulation and Synthesis Techniques for Asynchronous FIFO Design"* by **Clifford E. Cummings**, Sunburst Design, Inc.  
 *Highly recommended reading for deeper understanding.*
 
 - Verilog HDL
 - Simulation: ModelSim or any Verilog simulator
 - Synthesis: Quartus / Vivado (compatible)
 
-
-
-Feel free to contribute or suggest improvements!
