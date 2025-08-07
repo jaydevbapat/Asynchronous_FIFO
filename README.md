@@ -1,12 +1,29 @@
-# Async_fifo
-Verilog implementation of Asynchronous FIFO using gray coding and two flop synchronizer
+# Async_FIFO
 
-Verilog code of Asynchronous FIFO.
+Verilog implementation of an **Asynchronous FIFO** using Gray coding and two-flop synchronizers.
 
-Asynchronous FIFO :
-Depth       = 64 (hence Address width = 6 bits)
-Data width  = 16 bits
-Gray code pointer for 2-flop synchronization
-Binary code pointer for addressing
+---
 
-"Simulation and Synthesis Techniques for Asynchronous FIFO Design" by Clifford E. Cummings, Sunburst Design, Inc. was referred for the designs. Going through the document is highly recommended.
+## Description
+
+This project implements an **Asynchronous FIFO** with the following specifications:
+
+- **Depth:** 64 (Address width = 6 bits)
+- **Data width:** 16 bits
+- **Write/Read Pointer Synchronization:**  
+  - Gray-coded pointers for reliable clock-domain crossing  
+  - Two-flop synchronizers for metastability protection
+- **Addressing:** Binary-coded pointer for memory access
+
+The design is inspired by and follows guidelines from:  
+📄 *"Simulation and Synthesis Techniques for Asynchronous FIFO Design"*  
+by **Clifford E. Cummings**, Sunburst Design, Inc.  
+*Highly recommended reading for deeper understanding.*
+
+- Verilog HDL
+- Simulation: ModelSim or any Verilog simulator
+- Synthesis: Quartus / Vivado (compatible)
+
+---
+
+Feel free to contribute or suggest improvements!
