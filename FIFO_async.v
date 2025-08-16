@@ -5,8 +5,8 @@ module FIFO_async (output [15:0] read_data,
 			  input write_enable, clock_write, write_reset_n,
 			  input read_enable, clock_read, read_reset_n);
 	
-	wire [5:0] write_address, read_address;
-	wire [6:0] write_pointer, read_pointer, sync_read_pointer, sync_write_pointer;
+	wire [6:0] write_address, read_address;
+	wire [7:0] write_pointer, read_pointer, sync_read_pointer, sync_write_pointer;
 
 	Sync_read_2_write srw (sync_read_pointer, read_pointer, clock_write, write_reset_n);
 
