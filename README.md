@@ -8,7 +8,7 @@ Verilog implementation of an **Asynchronous FIFO** using Gray coding and two-flo
 
 This project implements an **Asynchronous FIFO** with the following specifications:
 
-- **Depth:** 64 (Address width = 6 bits)
+- **Depth:** 128 (Address width = 7 bits)
 - **Data width:** 16 bits
 - **Write/Read Pointer Synchronization:**  
   - Gray-coded pointers for reliable clock-domain crossing  
