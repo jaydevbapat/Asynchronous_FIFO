@@ -23,14 +23,16 @@ module testbench;
 	
 	always
 	begin
+	// 25 MHz
 		clock_read = ~clock_read; 
-		#50;
+		#20; 
 	end
 	
 	always
 	begin
+	// 100 MHz
 		clock_write = ~clock_write;
-		#10;
+		#5;
 	end
 	
 	initial
@@ -51,26 +53,55 @@ module testbench;
 		write_enable = 1;
 		read_enable = 1;
 		#20;
-		for (i=1; i<50; i=i+1)
+		
+		
+		for (i=1; i<160; i=i+1)
 		begin
 			write_data = i;
-			#20;
+			#10;
 		end
 		write_enable = 0;
 		
-		#5000;
+		#5500;
+		
+		
 		
 		write_data = 619;
 		write_enable = 1;
 		#20;
-		for (i=1; i<50; i=i+1)
+		
+		for (i=1; i<160; i=i+1)
 		begin
-			write_data = 2*i + 3*i*i + 5;
-			#20;
+			write_data = 2*i;
+			#10;
+		end
+		write_enable = 0;
+//		
+//		#2000;
+		#4760; // -4 elements
+
+		
+		
+		
+		
+		
+		write_data = 1;
+		write_enable = 1;
+		#20;
+		
+		for (i=1; i<160; i=i+1)
+		begin
+			write_data = 3*i;
+			#10;
 		end
 		write_enable = 0;
 		
 		#5000;
+		
+		
+		
+		
+		
 		$stop;
 	end
 endmodule
