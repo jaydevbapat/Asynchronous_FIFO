@@ -1,8 +1,8 @@
-module Sync_write_to_read (output reg [6:0] sync_write_pointer,
-		      input [6:0] write_pointer,
+module Sync_write_to_read (output reg [7:0] sync_write_pointer,
+		      input [7:0] write_pointer,
 		      input clock_read, read_reset_n);
 				 
-	reg [6:0] t_pointer;
+	reg [7:0] t_pointer;
 	
 	// 2 flop synchronizer for write point with respect to read clock
 	always @(posedge clock_read or negedge read_reset_n)
